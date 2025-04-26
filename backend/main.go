@@ -27,7 +27,6 @@ func getRoutes(c *gin.Context) {
 func sendDataToGemini(textData string) (interface{}, error) {
 	ctx := context.Background()
 	client, err := genai.NewClient(ctx, &genai.ClientConfig{
-		APIKey:  "AIzaSyBzWpKNNwuRnwUULiPl6kVOV50VJ3hyHLE",
 		Backend: genai.BackendGeminiAPI,
 	})
 	if err != nil {
